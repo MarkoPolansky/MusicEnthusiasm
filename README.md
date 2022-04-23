@@ -16,9 +16,8 @@
 - Run php artisan key:generate
 - Run php artisan migrate
 - Run php artisan db:seed to run seeders, if any.
-- php artisan breeze:install
 - npm install
-- npm run dev
+- npm run watch
 - php artisan serve
 
 ## About Laravel
