@@ -1,4 +1,11 @@
-.timeline:before {
+body{
+    background: url("../images/background.svg");
+    background-size: cover;
+    background-attachment: fixed;
+
+}
+
+.timeline-section:before {
     content: "";
     width: 2px;
     height: 100%;
@@ -12,6 +19,7 @@
     width: auto;
     max-height: 300px;
     border-radius: 20px;
+    z-index: 5;
 }
 .year {
     font-size: .75rem;
@@ -27,10 +35,10 @@
 
 
 @media only screen and (max-width: 768px) {
-    
+
 }
 @media only screen and (max-width: 576px) {
-    
+
     .timeline:before {
         left: auto;
         right: 22px;
@@ -43,7 +51,7 @@
     .div-img{
         justify-content: center!important;
     }
-    
-    
+
+
 }
 /*.timeline:nth-child(odd) .col .year {*/
