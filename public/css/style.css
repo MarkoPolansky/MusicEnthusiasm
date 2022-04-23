@@ -1,0 +1,49 @@
+.timeline:before {
+    content: "";
+    width: 2px;
+    height: 100%;
+    background: #d8d8d8;
+    position: absolute;
+    left: 0;
+    right: 0;
+    margin: auto;
+}
+.timeline-img {
+    width: auto;
+    max-height: 300px;
+    border-radius: 20px;
+}
+.year {
+    font-size: .75rem;
+    color: rgba(54,63,84,.3);
+    position: absolute;
+    left: -48px;
+    transform: translateX(-50%);
+    top: 20%;
+    background: #fff;
+    padding: 10px;
+    font-weight: 700;
+}
+
+
+@media only screen and (max-width: 768px) {
+    
+}
+@media only screen and (max-width: 576px) {
+    
+    .timeline:before {
+        left: auto;
+        right: 22px;
+    }
+    .year {
+        left: auto;
+        right: -48px;
+
+    }
+    .div-img{
+        justify-content: center!important;
+    }
+    
+    
+}
+/*.timeline:nth-child(odd) .col .year {*/
