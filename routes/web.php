@@ -32,10 +32,14 @@ Route::get("blade",function (){
    return view("index");
 });
 
+Route::get('/event/create',function (){
+    dd('daasd');
+});
+
 Route::controller(\App\Http\Controllers\EventController::class)->group(function (){
     Route::get('/event/{event:id}','show')->name('event.show');
-    Route::get('/event/create','show')->name('event.create');
-    Route::post('/event','create')->name('event.store');
+    Route::get('/event/create','create')->name('event.create');
+    Route::post('/event','store')->name('event.store');
     Route::put('/event/{event:id}','update')->name('event.update');
     Route::delete('/event/{event:id}','destroy')->name('event.delete');
 });

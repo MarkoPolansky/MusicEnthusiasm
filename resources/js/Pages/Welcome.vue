@@ -40,6 +40,10 @@
                                         {{ tag.name }}
 
                                     </div>
+
+                                    <Link class="font-sarif p-2 text-sm rounded-xl bg-gray-600 text-white" :href="'/event/create'">
+                                    Create new Event
+                                    </Link>
                                 </div>
 
                             </form>
@@ -55,7 +59,7 @@
                         <Link :href="route('event.show',event.id)"
                             v-for="event in filteredEvents" :key="event.id" class="flex flex-col sm:flex-row container-fluid m-0 timeline pt-12 position-relative">
                                 <div class="div-img w-full col-12 col-sm-6 col-md-6 col-lg-6 justify-end d-flex sm:px-12 px-4">
-                                    <img class="timeline-img " :src="event.images[0] ? event.images[0].image : '#'" />
+                                    <img class="timeline-img " src="https://images.pexels.com/photos/4177708/pexels-photo-4177708.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260" />
                                 </div>
                             <div class="col col-12 w-full col-sm-6 col-md-6 col-lg-6 sm:px-12 px-6 align-items-center d-flex">
 
