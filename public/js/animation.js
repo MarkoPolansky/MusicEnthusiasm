@@ -36,8 +36,17 @@ let tl1 = gsap.timeline({
     scrollTrigger: {
         trigger: ".timeline-section",
         //toggleActions: "play none none none",
-        start:"start center",
+        start:"start 40%",
+        end:"bottom 40%"
+        ,
         markers:true,
         scrub: 1
     }
 });
+tl1.fromTo(".progress-bar",{
+  height:"0",
+  ease: Power0.easeNone
+},{
+  height:"100%",
+  ease: Power0.easeNone
+})
