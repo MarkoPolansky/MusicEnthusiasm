@@ -4,16 +4,54 @@ body{
     background-attachment: fixed;
 
 }
-
+.header{
+    background-image: url("../images/background.jpg");
+    background-color:rgba(0, 0, 0, 0.3);
+    background-blend-mode: multiply;
+    background-size: cover;
+    background-repeat: no-repeat;
+    min-height: 400px;
+}
+.header-div{
+    height: 400px;
+}
+.text{
+    max-width: 400px    ;
+}
+.progress-bar{
+    width: 2px;
+    height: 100%;
+    background: red;
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    margin: auto;
+}
+/*
 .timeline-section:before {
+    content: "";
+    width: 2px;
+    height: 200px;
+    background: red;
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    margin: auto;
+}*/
+.timeline-section:after {
     content: "";
     width: 2px;
     height: 100%;
     background: #d8d8d8;
     position: absolute;
+    top: 0;
     left: 0;
     right: 0;
     margin: auto;
+
+    z-index: -1;
 }
 .timeline-img {
     width: auto;
@@ -22,6 +60,8 @@ body{
     z-index: 5;
 }
 .year {
+    position: relative;
+    z-index: 2;
     font-size: .75rem;
     color: rgba(54,63,84,.3);
     position: absolute;
@@ -38,8 +78,17 @@ body{
 
 }
 @media only screen and (max-width: 576px) {
-
+    /*
     .timeline:before {
+        left: auto;
+        right: 22px;
+    }
+    */
+    .progress-bar{
+        left: auto;
+        right: 22px;
+    }
+    .timeline-section:after {
         left: auto;
         right: 22px;
     }

@@ -12,7 +12,7 @@ revealContainers.forEach((container) => {
             trigger: container,
             toggleActions: "play none none none",
             start:"100% bottom",
-            markers:true
+            markers:false
         }
     });
 
@@ -28,4 +28,16 @@ revealContainers.forEach((container) => {
         ease: Power2.out
     });
 
+});
+
+
+
+let tl1 = gsap.timeline({
+    scrollTrigger: {
+        trigger: ".timeline-section",
+        //toggleActions: "play none none none",
+        start:"start center",
+        markers:true,
+        scrub: 1
+    }
 });

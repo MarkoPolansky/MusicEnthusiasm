@@ -7,16 +7,18 @@
     <link rel="stylesheet" type="text/css" href="{{asset('css/style.css')}}?v=1.0">
 
 </head>
-<body class="pt-5">
-    <section class="container-fluid ">
-        <div class="container text-center">
-            <h1 class="display-2 fw-normal">TimeLine</h1>
-            <div class="search">
+<body class="">
+    <section class="container-fluid header position-relative">
+        <div class="container-fluid header-div d-flex row m-0 justify-items-around">
+      
+            <h1 class="display-2 col-12 text-light text-center fw-normal">TimeLine</h1>
+            <div class="search col-12 d-flex container-fluid d-flex justify-content-center align-items-center">
                 <input type="text" name="search">
             </div>
         </div>
     </section>
     <section class="timeline-section mt-5 position-relative">
+        <div class="progress-bar"></div>
         @for ($i = 0; $i < 5; $i++)
             <div class="row container-fluid m-0 timeline pt-5 position-relative">
                 <div class="div-img col-12 col-sm-6 col-md-6 col-lg-6 justify-content-end d-flex px-sm-5 px-4">
@@ -38,6 +40,9 @@
 
 
     </section>
+    <div class="vh-100">
+
+    </div>
 </body>
 <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.4.0/gsap.min.js"></script>
 <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.3.3/ScrollTrigger.min.js"></script>
