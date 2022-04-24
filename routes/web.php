@@ -28,6 +28,9 @@ Route::get('/', function () {
         'tags' => \App\Models\Tag::all()
     ]);
 });
+Route::get("blade",function (){
+   return view("index");
+});
 
 Route::controller(\App\Http\Controllers\EventController::class)->group(function (){
     Route::get('/event/{event:id}','show')->name('event.show');

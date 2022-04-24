@@ -8,47 +8,7 @@
 
                 <!-- component -->
                 <!-- component -->
-                <div class="py-10 container mx-auto px-5">
-                    <!-- component -->
-                    <div class="relative">
-                        <div class="border-r-4 border-black absolute h-full top-0" style="left: 9px" ></div>
-                <div class="flex flex-row gap-x-4  items-start  ">
-                    <ul class="list-none m-0 p-0 w-full">
-                        <li v-for="event in events" :key="event.id" class="mb-5">
-                            <Link :href="route('event.show',event.id)" >
-                                    <div class="flex group  justify-end items-center  ">
-                                        <div class="bg-gray-800 group-hover:bg-red-700 z-10 rounded-full border-4 border-black  h-5 w-5">
-                                            <div class="bg-white h-1 w-6 items-center  ml-4 mt-1"></div>
-                                        </div>
-                                        <div class="flex-1 ml-4 z-10 font-medium">
-                                            <div class="order-1 space-y-2 bg-white rounded-lg shadow-only transition-ease lg:w-full px-6 py-4">
-                                                <h3 class="mb-3 font-bold text-2xl">{{ event.title }}</h3>
-                                                <p class="pb-4 text-sm text-gray-900"> {{ shortDescription(event.description)}} ( {{event.happened_at}} )</p>
-                                                <hr />
-
-                                                <div class="flex flex-wrap  items-center gap-x-2 justify-start mt-4 gap-y-2 md:gap-y-0  ">
-                                                    <div v-for="tag in event.tags" :key="tag"
-                                                         :class="[tag.id == 1 ? 'border-red-500 text-red-500 hover:bg-red-500 ': '',
-                                                                  tag.id == 2 ? 'border-green-500 text-green-500 hover:bg-green-500 ': '',
-                                                                  tag.id == 3 ? 'border-blue-500 text-blue-500 hover:bg-blue-500 ': '',
-                                                                  tag.id == 4 ? 'border-yellow-500 text-yellow-500 hover:bg-yellow-500 ': '',
-                                                                  tag.id == 5 ? 'border-purple-500 text-purple-500 hover:bg-purple-500 ': '',
-                                                                  tag.id == 6 ? 'border-orange-500 text-orange-500 hover:bg-orange-500 ': '',
-                                                                  tag.id == 7 ? 'border-pink-500 text-pink-500 hover:bg-pink-500 ': '',
-                                                                  tag.id == 8 ? 'border-red-200 text-red-200 hover:bg-red-200 ': '',]"
-                                                         class="rounded-full p-2 text-xs border-2 text-white hover:text-white bg-white  ">
-
-                                                        {{ tag.name }}
-
-                                                    </div>
-                                                </div>
-
-                                            </div>
-                                        </div>
-                                    </div>
-                            </Link>
-                        </li>
-                    </ul>
+                <div class="py-10 container mx-auto">
                     <div class="w-2/5 p-8 rounded-xl sticky bg-white">
                         <!-- component -->
                         <div class="relative ">
@@ -85,6 +45,33 @@
 
                         </div>
                     </div>
+                    <!-- component -->
+                    <div class="relative">
+                <div class="flex flex-row gap-x-4  items-start  ">
+                    <section class="timeline-section mt-5 position-relative w-fulls px-5">
+                        <div class="progress-bar"></div>
+
+                        <div v-for="n in 5" class="flex flex-col sm:flex-row container-fluid m-0 timeline pt-12 position-relative">
+                            <div class="div-img w-full col-12 col-sm-6 col-md-6 col-lg-6 justify-end d-flex sm:px-12 px-4">
+                                <img class="timeline-img " src="{{asset('images/photo.jpg')}}" >
+                            </div>
+                            <div class="col col-12 w-full col-sm-6 col-md-6 col-lg-6 sm:px-12 px-6 align-items-center d-flex">
+                                <div class="text position-relative pt-12 sm:pt-0">
+                                    <p class="year p-0 ">23.3</p>
+                                    <h3 class="title">Lorem ipsum</h3>
+                                    <p class="description">
+                                        Ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+                                        tempor incididunt ut labore et dolore magna aliqua.
+                                    </p>
+                                    <a href="#" class="open-qr text-dark" >Zobraziť Qr code</a>
+                                </div>
+                            </div>
+                        </div>
+
+
+
+                    </section>
+
                 </div>
                 </div>
             </div>
