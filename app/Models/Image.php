@@ -10,11 +10,12 @@ class Image extends Model
     use HasFactory;
 
     protected $fillable = [
-        'url',
+        'image',
         'event_id',
         'title',
         'description'
     ];
+
 
     public function event()
     {

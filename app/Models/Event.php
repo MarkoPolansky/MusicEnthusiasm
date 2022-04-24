@@ -15,6 +15,11 @@ class Event extends Model
         'happened_at',
     ];
 
+    protected $casts = [
+        'happened_at' => 'datetime:m-d'
+    ];
+
+
     public function images()
     {
         return $this->hasMany(Image::class);

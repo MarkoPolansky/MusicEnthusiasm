@@ -20,7 +20,7 @@ class EventFactory extends Factory
         return [
             'title' => $this->faker->sentence(5),
             'description' => $this->faker->sentence(random_int(10,30)),
-            'happened_at' => Carbon::now()->subHours(random_int(0,48))
+            'happened_at' => Carbon::now()->subDays(random_int(0,48))
         ];
     }
 }

@@ -18,7 +18,7 @@ class ImageFactory extends Factory
     public function definition()
     {
         return [
-            'url' => $this->faker->image,
+            'image' => $this->faker->image,
             'event_id' => random_int(1,50),
             'title' => $this->faker->sentence(5),
             'description' => $this->faker->sentence(random_int(10,30)),
