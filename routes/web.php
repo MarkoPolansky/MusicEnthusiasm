@@ -15,16 +15,22 @@ use Inertia\Inertia;
 |
 */
 
+//Route::get('/', function () {
+//    return view("index");
+//});
 Route::get('/', function () {
-    return view("index");
-});
-Route::get('/aa', function () {
-    return Inertia::render('index', [
+    return Inertia::render('Welcome', [
         'canLogin' => Route::has('login'),
         'canRegister' => Route::has('register'),
         'laravelVersion' => Application::VERSION,
         'phpVersion' => PHP_VERSION,
+        'events' => \App\Models\Event::with('tags','images')->take(12)->orderBy('happened_at')->get(),
+        'tags' => \App\Models\Tag::all()
     ]);
+});
+
+Route::controller(\App\Http\Controllers\EventController::class)->group(function (){
+    Route::get('/event/{event:id}','show')->name('event.show');
 });
 
 Route::get('/dashboard', function () {
