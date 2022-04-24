@@ -37,18 +37,17 @@
     right: 0;
     margin: auto;
 }*/
-.timeline-section:after {
+.timeline-section:before {
     content: "";
     width: 2px;
     height: 100%;
-    background: #d8d8d8;
+    background: #cbcbcb;
     position: absolute;
     top: 0;
     left: 0;
     right: 0;
     margin: auto;
 
-    z-index: -1;
 }
 .timeline-img {
     width: auto;
@@ -88,7 +87,7 @@
         left: auto;
         right: 22px;
     }
-    .timeline-section:after {
+    .timeline-section:before {
         left: auto;
         right: 22px;
     }
